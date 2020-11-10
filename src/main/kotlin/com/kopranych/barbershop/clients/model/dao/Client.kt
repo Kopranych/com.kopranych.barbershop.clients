@@ -4,22 +4,24 @@ import java.time.LocalDate
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
+import javax.persistence.Table
 
 @Entity
-class Client(
+@Table(name = "clients")
+data class Client(
     @Id
     val id: Long,
-    @Column
+    @Column(name = "name")
     val name: String,
-    @Column
+    @Column(name = "surname")
     val surname: String,
-    @Column
+    @Column(name = "middle_name")
     val middleName: String,
-    @Column
+    @Column(name = "phone")
     val phone: String,
-    @Column
+    @Column(name = "email")
     val email: String,
-    @Column
+    @Column(name = "birthday")
     val birthday: LocalDate
 ) {
   @Column
