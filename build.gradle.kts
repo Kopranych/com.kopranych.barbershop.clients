@@ -25,7 +25,10 @@ dependencies {
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
   implementation("org.springframework.cloud:spring-cloud-starter-config")
-//  implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+  implementation("org.springframework.cloud:spring-cloud-starter-config")
+
+  implementation("org.springdoc:springdoc-openapi-ui:1.4.3")
+
   runtimeOnly("org.postgresql:postgresql")
   testImplementation("org.springframework.boot:spring-boot-starter-test") {
     exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
