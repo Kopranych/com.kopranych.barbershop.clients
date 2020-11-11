@@ -7,7 +7,7 @@ import javax.persistence.*
 @Table(name = "clients")
 data class Client(
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Long = -1,
+    val id: Long,
     @Column(name = "name")
     val name: String,
     @Column(name = "surname")
@@ -21,6 +21,6 @@ data class Client(
     @Column(name = "birthday")
     val birthday: LocalDate,
     @Column(name = "full_name")
-    val fullName: String = "$name $middleName $surname"
+    val fullName: String? = "$name $middleName $surname"
 ) {
 }

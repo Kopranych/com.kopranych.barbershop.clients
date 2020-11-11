@@ -6,6 +6,7 @@ plugins {
   kotlin("jvm") version "1.3.72"
   kotlin("plugin.spring") version "1.3.72"
   kotlin("plugin.jpa") version "1.3.72"
+  kotlin("kapt") version "1.4.10"
 }
 
 group = "com.kopranych.barbershop"
@@ -28,6 +29,9 @@ dependencies {
   implementation("org.springframework.cloud:spring-cloud-starter-config")
 
   implementation("org.springdoc:springdoc-openapi-ui:1.4.3")
+
+  implementation("org.mapstruct:mapstruct:1.4.1.Final")
+  kapt("org.mapstruct:mapstruct-processor:1.4.1.Final")
 
   runtimeOnly("org.postgresql:postgresql")
   testImplementation("org.springframework.boot:spring-boot-starter-test") {
