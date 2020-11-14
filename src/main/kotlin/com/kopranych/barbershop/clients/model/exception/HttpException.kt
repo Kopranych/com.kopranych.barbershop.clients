@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus
 
 abstract class HttpException internal constructor(
     @field:JsonProperty("http_status")
-    @param:JsonProperty(value = "http_status", required = true) private val httpStatus: HttpStatus,
+    @param:JsonProperty(value = "http_status", required = true) val httpStatus: HttpStatus,
     @param:JsonProperty("message") override val message: String,
-    @param:JsonProperty("detailed") private val detailed: String?
+    @param:JsonProperty("detailed") val detailed: String
 ) : RuntimeException(message)

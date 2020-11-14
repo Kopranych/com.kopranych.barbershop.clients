@@ -12,5 +12,4 @@ data class ClientDto(
     val birthday: LocalDate,
     val fullName: String? = "$name $middleName $surname"
 ) {
-
 }

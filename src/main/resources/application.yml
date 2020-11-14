@@ -1,7 +1,7 @@
 spring:
   jpa:
     database: POSTGRESQL
-    show-sql: true
+    show-sql: false
     properties.hibernat e.dialect: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: true
   datasource:

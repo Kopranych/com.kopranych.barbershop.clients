@@ -17,7 +17,7 @@ class ClientsController(private val clientsService: ClientsService) : BaseContro
   }
 
   @GetMapping
-  fun get() : List<ClientDto> {
+  fun get(): List<ClientDto> {
     return clientsService.getAll().map(mapper::map)
   }
 
