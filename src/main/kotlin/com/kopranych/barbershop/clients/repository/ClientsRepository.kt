@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface ClientsRepository: CrudRepository<Client, Long> {
+interface ClientsRepository : CrudRepository<Client, Long> {
 }

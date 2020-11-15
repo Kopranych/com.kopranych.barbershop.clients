@@ -12,7 +12,7 @@ class ClientsController(private val clientsService: ClientsService) : BaseContro
   val mapper: ClientMapper = Mappers.getMapper(ClientMapper::class.java)
 
   @GetMapping("/{id}")
-  fun get(@PathVariable id: Long) : ClientDto {
+  fun get(@PathVariable id: Long): ClientDto {
     return mapper.map(clientsService.get(id))
   }
 

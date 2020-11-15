@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest
 
 
 @ControllerAdvice
-class ExceptionControllerAdvice: Logging {
+class ExceptionControllerAdvice : Logging {
 
   private val DEFAULT_MESSAGE = "Exception at {}"
 
@@ -38,5 +38,5 @@ class ExceptionControllerAdvice: Logging {
   }
 
   private fun exceptionResponse(e: Exception) =
-    ExceptionResponse(e.message, getStackTrace(e))
+      ExceptionResponse(e.message, getStackTrace(e))
 }
