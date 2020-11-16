@@ -4,6 +4,8 @@ import com.kopranych.barbershop.clients.mapper.ClientMapper
 import com.kopranych.barbershop.clients.model.ClientDto
 import com.kopranych.barbershop.clients.service.ClientsService
 import org.mapstruct.factory.Mappers
+import org.springframework.data.domain.Page
+import org.springframework.data.domain.PageRequest
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -17,8 +19,8 @@ class ClientsController(private val clientsService: ClientsService) : BaseContro
   }
 
   @GetMapping
-  fun get(): List<ClientDto> {
-    return clientsService.getAll().map(mapper::map)
+  fun get(@RequestParam(defaultValue = "0") page: Int, @RequestParam(defaultValue = "100") size: Int): Page<ClientDto> {
+    return clientsService.getAll(PageRequest.of(page, size)).map(mapper::map)
   }
 
   @PostMapping
