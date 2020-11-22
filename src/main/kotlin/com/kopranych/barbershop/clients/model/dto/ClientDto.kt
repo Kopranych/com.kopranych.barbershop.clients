@@ -1,4 +1,4 @@
-package com.kopranych.barbershop.clients.model
+package com.kopranych.barbershop.clients.model.dto
 
 import java.time.LocalDate
 

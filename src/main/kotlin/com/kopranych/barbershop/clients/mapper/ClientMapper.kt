@@ -1,7 +1,7 @@
 package com.kopranych.barbershop.clients.mapper
 
-import com.kopranych.barbershop.clients.model.ClientDto
 import com.kopranych.barbershop.clients.model.dao.Client
+import com.kopranych.barbershop.clients.model.dto.ClientDto
 import org.mapstruct.Mapper
 
 @Mapper

@@ -1,7 +1,7 @@
 package com.kopranych.barbershop.clients.controller
 
 import com.kopranych.barbershop.clients.mapper.ClientMapper
-import com.kopranych.barbershop.clients.model.ClientDto
+import com.kopranych.barbershop.clients.model.dto.ClientDto
 import com.kopranych.barbershop.clients.service.ClientsService
 import org.mapstruct.factory.Mappers
 import org.springframework.data.domain.Page
