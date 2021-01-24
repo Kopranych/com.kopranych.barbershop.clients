@@ -10,3 +10,10 @@ spring:
 eureka:
   client:
     enabled: false
+---
+spring:
+  profiles: docker
+  cloud:
+    config:
+      uri: http://barbershop-config:8888
+
