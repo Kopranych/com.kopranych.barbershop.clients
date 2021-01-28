@@ -1,12 +1,15 @@
 spring:
-  jpa:
-    database: POSTGRESQL
-    show-sql: false
-    properties.hibernat e.dialect: org.hibernate.dialect.PostgreSQLDialect
-    generate-ddl: true
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/
-    username: postgres
-    password: barbershop
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+#  jpa:
+#    database: POSTGRESQL
+#    show-sql: false
+#    properties.hibernat e.dialect: org.hibernate.dialect.PostgreSQLDialect
+#    generate-ddl: true
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    platform: postgres
+#    url: jdbc:postgresql://localhost:5432/
+#    username: postgres
+#    password: barbershop
