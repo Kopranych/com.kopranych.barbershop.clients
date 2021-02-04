@@ -7,6 +7,6 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/
+    url: jdbc:postgresql://barbershop-postgres:5432/
     username: postgres
     password: barbershop
